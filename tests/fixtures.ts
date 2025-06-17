@@ -161,7 +161,7 @@ export const test = baseTest.extend<TestFixtures & TestOptions, WorkerFixtures>(
           `--load-extension=${pathToExtension}`,
           '--enable-features=AllowContentInitiatedDataUrlNavigations',
         ],
-        channel: 'chromium',
+        channel: 'msedge',
         ...{ assistantMode: true, cdpPort },
       });
       const popupPage = await context.newPage();

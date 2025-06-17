@@ -1,6 +1,6 @@
-## Playwright MCP
+## Darbot Playwright MCP
 
-A Model Context Protocol (MCP) server that provides browser automation capabilities using [Playwright](https://playwright.dev). This server enables LLMs to interact with web pages through structured accessibility snapshots, bypassing the need for screenshots or visually-tuned models.
+A Model Context Protocol (MCP) server that provides browser automation capabilities using [Playwright](https://playwright.dev). This server enables LLMs to interact with web pages through structured accessibility snapshots, bypassing the need for screenshots or visually-tuned models. This version is optimized for Microsoft Edge with work profile support.
 
 ### Key Features
 
@@ -27,14 +27,14 @@ First, install the Playwright MCP server with your client. A typical configurati
     "playwright": {
       "command": "npx",
       "args": [
-        "@playwright/mcp@latest"
+        "darbot-playwright-mcp@latest"
       ]
     }
   }
 }
 ```
 
-[<img src="https://img.shields.io/badge/VS_Code-VS_Code?style=flat-square&label=Install%20Server&color=0098FF" alt="Install in VS Code">](https://insiders.vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522playwright%2522%252C%2522command%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522%2540playwright%252Fmcp%2540latest%2522%255D%257D) [<img alt="Install in VS Code Insiders" src="https://img.shields.io/badge/VS_Code_Insiders-VS_Code_Insiders?style=flat-square&label=Install%20Server&color=24bfa5">](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522playwright%2522%252C%2522command%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522%2540playwright%252Fmcp%2540latest%2522%255D%257D)
+[<img src="https://img.shields.io/badge/VS_Code-VS_Code?style=flat-square&label=Install%20Server&color=0098FF" alt="Install in VS Code">](https://insiders.vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2520%2522playwright%2522%252C%2520%2522command%2522%253A%2520%2522npx%2522%252C%2520%2522args%2522%253A%2520%255B%2522darbot-playwright-mcp%2540latest%2522%255D%257D) [<img alt="Install in VS Code Insiders" src="https://img.shields.io/badge/VS_Code_Insiders-VS_Code_Insiders?style=flat-square&label=Install%20Server&color=24bfa5">](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2520%2522playwright%2522%252C%2520%2522command%2522%253A%2520%2522npx%2522%252C%2520%2522args%2522%253A%2520%255B%2522darbot-playwright-mcp%2540latest%2522%255D%257D)
 
 
 <details><summary><b>Install in VS Code</b></summary>
@@ -43,7 +43,7 @@ You can also install the Playwright MCP server using the VS Code CLI:
 
 ```bash
 # For VS Code
-code --add-mcp '{"name":"playwright","command":"npx","args":["@playwright/mcp@latest"]}'
+code --add-mcp '{"name":"playwright","command":"npx","args":["darbot-playwright-mcp@latest"]}'
 ```
 
 After installation, the Playwright MCP server will be available for use with your GitHub Copilot agent in VS Code.
@@ -54,11 +54,11 @@ After installation, the Playwright MCP server will be available for use with you
 
 #### Click the button to install:
 
-[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=playwright&config=eyJjb21tYW5kIjoibnB4IEBwbGF5d3JpZ2h0L21jcEBsYXRlc3QifQ%3D%3D)
+[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=playwright&config=eyJjb21tYW5kIjogIm5weCBkYXJib3QtcGxheXdyaWdodC1tY3BAbGF0ZXN0In0=)
 
 #### Or install manually:
 
-Go to `Cursor Settings` -> `MCP` -> `Add new MCP Server`. Name to your liking, use `command` type with the command `npx @playwright/mcp`. You can also verify config or add command like arguments via clicking `Edit`.
+Go to `Cursor Settings` -> `MCP` -> `Add new MCP Server`. Name to your liking, use `command` type with the command `npx darbot-playwright-mcp`. You can also verify config or add command like arguments via clicking `Edit`.
 
 ```js
 {
@@ -66,7 +66,7 @@ Go to `Cursor Settings` -> `MCP` -> `Add new MCP Server`. Name to your liking, u
     "playwright": {
       "command": "npx",
       "args": [
-        "@playwright/mcp@latest"
+        "darbot-playwright-mcp@latest"
       ]
     }
   }
@@ -85,7 +85,7 @@ Follow Windsuff MCP [documentation](https://docs.windsurf.com/windsurf/cascade/m
     "playwright": {
       "command": "npx",
       "args": [
-        "@playwright/mcp@latest"
+        "darbot-playwright-mcp@latest"
       ]
     }
   }
@@ -104,7 +104,7 @@ Follow the MCP install [guide](https://modelcontextprotocol.io/quickstart/user),
     "playwright": {
       "command": "npx",
       "args": [
-        "@playwright/mcp@latest"
+        "darbot-playwright-mcp@latest"
       ]
     }
   }
@@ -118,7 +118,7 @@ Follow the MCP install [guide](https://modelcontextprotocol.io/quickstart/user),
 Use the Claude Code CLI to add the Playwright MCP server:
 
 ```bash
-claude mcp add playwright npx @playwright/mcp@latest
+claude mcp add playwright npx darbot-playwright-mcp@latest
 ```
 </details>
 
@@ -133,7 +133,7 @@ Open [Qodo Gen](https://docs.qodo.ai/qodo-documentation/qodo-gen) chat panel in 
     "playwright": {
       "command": "npx",
       "args": [
-        "@playwright/mcp@latest"
+        "darbot-playwright-mcp@latest"
       ]
     }
   }
@@ -150,7 +150,7 @@ Playwright MCP server supports following arguments. They can be provided in the 
 <!--- Options generated by update-readme.js -->
 
 ```
-> npx @playwright/mcp@latest --help
+> npx darbot-playwright-mcp@latest --help
   --allowed-origins <origins>  semicolon-separated list of origins to allow the
                                browser to request. Default is to allow all.
   --blocked-origins <origins>  semicolon-separated list of origins to block the
@@ -235,7 +235,7 @@ state [here](https://playwright.dev/docs/auth).
     "playwright": {
       "command": "npx",
       "args": [
-        "@playwright/mcp@latest",
+        "darbot-playwright-mcp@latest",
         "--isolated",
         "--storage-state={path/to/storage.json}"
       ]
@@ -250,7 +250,7 @@ The Playwright MCP server can be configured using a JSON configuration file. You
 using the `--config` command line option:
 
 ```bash
-npx @playwright/mcp@latest --config path/to/config.json
+npx darbot-playwright-mcp@latest --config path/to/config.json
 ```
 
 <details>
@@ -339,7 +339,7 @@ When running headed browser on system w/o display or from worker processes of th
 run the MCP server from environment with the DISPLAY and pass the `--port` flag to enable SSE transport.
 
 ```bash
-npx @playwright/mcp@latest --port 8931
+npx darbot-playwright-mcp@latest --port 8931
 ```
 
 And then in MCP client config, set the `url` to the SSE endpoint:
@@ -383,7 +383,7 @@ docker build -t mcr.microsoft.com/playwright/mcp .
 ```js
 import http from 'http';
 
-import { createConnection } from '@playwright/mcp';
+import { createConnection } from 'darbot-playwright-mcp';
 import { SSEServerTransport } from '@modelcontextprotocol/sdk/server/sse.js';
 
 http.createServer(async (req, res) => {
@@ -414,7 +414,7 @@ To use Vision Mode, add the `--vision` flag when starting the server:
     "playwright": {
       "command": "npx",
       "args": [
-        "@playwright/mcp@latest",
+        "darbot-playwright-mcp@latest",
         "--vision"
       ]
     }

@@ -26,7 +26,7 @@ import { sanitizeForFilePath } from './tools/utils.js';
 type Config = PublicConfig & {
   /**
    * TODO: Move to PublicConfig once we are ready to release this feature.
-   * Run server that is able to connect to the 'Playwright MCP' Chrome extension.
+   * Run server that is able to connect to the 'Darbot Playwright MCP' Chrome extension.
    */
   extension?: boolean;
 };

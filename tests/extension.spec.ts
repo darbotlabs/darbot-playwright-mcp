@@ -19,7 +19,7 @@ import { spawnSync } from 'child_process';
 
 import { test, expect } from './fixtures.js';
 
-import { createConnection } from '@playwright/mcp';
+import { createConnection } from '../index.js';
 
 test.skip(({ mcpMode }) => mcpMode !== 'extension');
 
