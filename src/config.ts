@@ -68,6 +68,12 @@ const defaultConfig: FullConfig = {
       channel: 'msedge',
       headless: os.platform() === 'linux' && !process.env.DISPLAY,
       chromiumSandbox: true,
+      args: [
+        '--disable-popup-blocking',
+        '--allow-popups',
+        '--disable-extensions-except',
+        '--load-extension',
+      ],
     },
     contextOptions: {
       viewport: null,

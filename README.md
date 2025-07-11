@@ -704,6 +704,47 @@ X Y coordinate space, based on the provided screenshot.
 </details>
 
 <details>
+<summary><b>Work Profiles</b></summary>
+
+<!-- NOTE: This has been generated via update-readme.js -->
+
+- **browser_save_profile**
+  - Title: Save Work Profile
+  - Description: Save the current browser state as a work profile
+  - Parameters:
+    - `name` (string): Name for the work profile
+    - `description` (string, optional): Optional description for the work profile
+  - Read-only: **false**
+
+<!-- NOTE: This has been generated via update-readme.js -->
+
+- **browser_switch_profile**
+  - Title: Switch Work Profile
+  - Description: Switch to a saved work profile
+  - Parameters:
+    - `name` (string): Name of the work profile to switch to
+  - Read-only: **false**
+
+<!-- NOTE: This has been generated via update-readme.js -->
+
+- **browser_list_profiles**
+  - Title: List Work Profiles
+  - Description: List all saved work profiles
+  - Parameters: None
+  - Read-only: **true**
+
+<!-- NOTE: This has been generated via update-readme.js -->
+
+- **browser_delete_profile**
+  - Title: Delete Work Profile
+  - Description: Delete a saved work profile
+  - Parameters:
+    - `name` (string): Name of the work profile to delete
+  - Read-only: **false**
+
+</details>
+
+<details>
 <summary><b>Testing</b></summary>
 
 <!-- NOTE: This has been generated via update-readme.js -->

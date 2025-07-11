@@ -30,6 +30,7 @@ import keyboardTools from '../lib/tools/keyboard.js';
 import navigateTools from '../lib/tools/navigate.js';
 import networkTools from '../lib/tools/network.js';
 import pdfTools from '../lib/tools/pdf.js';
+import * as profilesTools from '../lib/tools/profiles.js';
 import snapshotTools from '../lib/tools/snapshot.js';
 import tabsTools from '../lib/tools/tabs.js';
 import screenshotTools from '../lib/tools/screenshot.js';
@@ -61,6 +62,12 @@ const categories = {
   ],
   'Tabs': [
     ...tabsTools(true),
+  ],
+  'Work Profiles': [
+    profilesTools.browserSaveProfile,
+    profilesTools.browserSwitchProfile,
+    profilesTools.browserListProfiles,
+    profilesTools.browserDeleteProfile,
   ],
   'Testing': [
     ...testTools,

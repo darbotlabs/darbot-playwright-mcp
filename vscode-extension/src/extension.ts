@@ -38,7 +38,7 @@ export function activate(context: vscode.ExtensionContext) {
   // Auto-start if configured
   const config = vscode.workspace.getConfiguration('darbot-browser-mcp');
   if (config.get('autoStart', false))
-    startServer();
+    void startServer();
 }
 
 export function deactivate() {
@@ -67,34 +67,33 @@ async function startServer() {
     const args = parts.slice(1);
 
     // Add log level if specified
-    if (logLevel !== 'info') {
+    if (logLevel !== 'info')
       args.push('--log-level', logLevel);
-    }
 
     mcpServerProcess = spawn(command, args, {
       stdio: 'pipe',
       shell: true,
     });
 
-    mcpServerProcess.on('error', (error) => {
+    mcpServerProcess.on('error', error => {
       void vscode.window.showErrorMessage(`Failed to start Browser MCP Server: ${error.message}`);
       mcpServerProcess = null;
       updateStatusBarItem(false);
     });
 
-    mcpServerProcess.on('exit', (code) => {
+    mcpServerProcess.on('exit', code => {
       if (code !== 0)
         void vscode.window.showErrorMessage(`Browser MCP Server exited with code ${code}`);
       mcpServerProcess = null;
       updateStatusBarItem(false);
     });
 
-    mcpServerProcess.stdout?.on('data', (data) => {
+    mcpServerProcess.stdout?.on('data', data => {
       // Log server output for debugging
       void data;
     });
 
-    mcpServerProcess.stderr?.on('data', (data) => {
+    mcpServerProcess.stderr?.on('data', data => {
       // Log server errors for debugging
       void data;
     });
@@ -126,8 +125,8 @@ function showStatus() {
   const serverPath = config.get('serverPath', 'npx @darbotlabs/darbot-browser-mcp@latest');
 
   vscode.window.showInformationMessage(
-    `Browser MCP Server Status: ${status}\nCommand: ${serverPath}`,
-    ...(isRunning ? ['Stop Server'] : ['Start Server']),
+      `Browser MCP Server Status: ${status}\nCommand: ${serverPath}`,
+      ...(isRunning ? ['Stop Server'] : ['Start Server']),
   ).then(selection => {
     if (selection === 'Start Server')
       void startServer();

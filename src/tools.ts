@@ -23,6 +23,7 @@ import keyboard from './tools/keyboard.js';
 import navigate from './tools/navigate.js';
 import network from './tools/network.js';
 import pdf from './tools/pdf.js';
+import * as profiles from './tools/profiles.js';
 import snapshot from './tools/snapshot.js';
 import tabs from './tools/tabs.js';
 import screenshot from './tools/screenshot.js';
@@ -42,6 +43,10 @@ export const snapshotTools: Tool<any>[] = [
   ...navigate(true),
   ...network,
   ...pdf,
+  profiles.browserSaveProfile,
+  profiles.browserSwitchProfile,
+  profiles.browserListProfiles,
+  profiles.browserDeleteProfile,
   ...screenshot,
   ...snapshot,
   ...tabs(true),
@@ -59,6 +64,10 @@ export const visionTools: Tool<any>[] = [
   ...navigate(false),
   ...network,
   ...pdf,
+  profiles.browserSaveProfile,
+  profiles.browserSwitchProfile,
+  profiles.browserListProfiles,
+  profiles.browserDeleteProfile,
   ...tabs(false),
   ...testing,
   ...vision,
